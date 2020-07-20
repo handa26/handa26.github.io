@@ -6,16 +6,18 @@
     <meta name="description" content="Your daily premier league info" />
     <meta name="theme-color" content="#00897B" />
     <title>Premier League Live</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
     <link rel="stylesheet" href="css/materialize.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <!-- Navbar -->
     <nav class="#6a1b9a purple darken-3" role="navigation">
       <div class="nav-wrapper container">
-        <a href="#" class="brand-logo" id="logo-container">Premier League</a>
+        <a href="#" class="brand-logo small" id="logo-container">
+          Premier League
+        </a>
         <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
         <ul class="topnav right hide-on-med-and-down"></ul>
         <ul class="sidenav" id="nav-mobile"></ul>
@@ -42,15 +44,5 @@
     <!-- IndexDB & Database -->
     <script src="js/idb.js"></script>
     <script src="js/db.js"></script>
-
-    <!-- Request data pertama kali -->
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        getStandings();
-        getMatch();
-        getTeams();
-        getSaved();
-      });
-    </script>
   </body>
 </html>

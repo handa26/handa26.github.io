@@ -1,0 +1,5 @@
+@media only screen and (max-width: 425px) {
+  a#logo-container.brand-logo {
+    font-size: 7vh;
+  }
+}
