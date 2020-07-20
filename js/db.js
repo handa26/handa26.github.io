@@ -9,17 +9,13 @@ let dbPromised = idb.open("premiere-league", 1, function (upgradeDb) {
 });
 
 const saveForLater = (data) => {
-  dbPromised
-    .then((db) => {
-      let tx = db.transaction("teams", "readwrite");
-      let store = tx.objectStore("teams");
-      console.log(data);
-      store.put(data);
-      return tx.complete;
-    })
-    .then(() => {
-      alert("Team berhasil disimpan di bookmark.");
-    });
+  dbPromised.then((db) => {
+    let tx = db.transaction("teams", "readwrite");
+    let store = tx.objectStore("teams");
+    console.log(data);
+    store.put(data);
+    return tx.complete;
+  });
 };
 
 const getAll = () => {
@@ -47,12 +43,10 @@ const getSavedById = (idParam) => {
 };
 
 const deleteSaved = (idpar) => {
-  dbPromised
-    .then((db) => {
-      let tx = db.transaction("teams", "readwrite");
-      let store = tx.objectStore("teams");
-      store.delete(parseInt(idpar));
-      return tx.complete;
-    })
-    .then(() => alert("Team dihapus dari bookmark"));
+  dbPromised.then((db) => {
+    let tx = db.transaction("teams", "readwrite");
+    let store = tx.objectStore("teams");
+    store.delete(parseInt(idpar));
+    return tx.complete;
+  });
 };

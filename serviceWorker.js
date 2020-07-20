@@ -6,13 +6,13 @@ if (workbox) {
   console.log(`Workbox is loaded 🎉`);
   workbox.precaching.precacheAndRoute(
     [
-      { url: "/index.html", revision: "2" },
+      { url: "/index.html", revision: "3" },
       { url: "/nav.html", revision: "1" },
-      { url: "/teamsInfo.html", revision: "1" },
+      { url: "/teamsInfo.html", revision: "2" },
       { url: "/favicon.ico", revision: "1" },
       { url: "/manifest.json", revision: "1" },
       { url: "/css/materialize.min.css", revision: "1" },
-      { url: "/css/style.css", revision: "2" },
+      { url: "/css/style.css", revision: "3" },
       { url: "/js/materialize.min.js", revision: "1" },
       { url: "/js/nav.js", revision: "1" },
       { url: "/js/data.js", revision: "1" },
