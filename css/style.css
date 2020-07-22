@@ -1,6 +1,6 @@
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 650px) {
   a#logo-container.brand-logo {
-    font-size: 7vh;
+    font-size: 5vh;
   }
 }
 
