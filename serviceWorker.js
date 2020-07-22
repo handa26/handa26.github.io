@@ -52,6 +52,13 @@ if (workbox) {
   );
 
   workbox.routing.registerRoute(
+    new RegExp("https://code.jquery.com/"),
+    workbox.strategies.cacheFirst({
+      cacheName: "jquery-script",
+    })
+  );
+
+  workbox.routing.registerRoute(
     /.*(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.cacheFirst({
       cacheName: "image",
@@ -69,8 +76,22 @@ if (workbox) {
 
   workbox.routing.registerRoute(
     /.*(?:googleapis|gstatic)\.com/,
-    workbox.strategies.cacheFirst({
+    workbox.strategies.staleWhileRevalidate({
       cacheName: "google-fonts",
+    })
+  );
+
+  workbox.routing.registerRoute(
+    new RegExp("https://fonts.googleapis.com/"),
+    workbox.strategies.cacheFirst({
+      cacheName: "google-fonts-1",
+    })
+  );
+
+  workbox.routing.registerRoute(
+    new RegExp("https://fonts.gstatic.com/ "),
+    workbox.strategies.cacheFirst({
+      cacheName: "google-fonts-2",
     })
   );
 
